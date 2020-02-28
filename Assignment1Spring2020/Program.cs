@@ -34,8 +34,19 @@ namespace Assignment1_Spring2020
         private static void PrintPattern(int n)
         {
             try
-            {
-                int rec_num = 1;     // initialising a number for an end point
+          {
+                if (n == 0) return;
+                for (int i = n; i >= 1; i--)
+                {
+                    Console.Write(i + " ");
+                }
+                Console.Write("\n");
+                PrintPattern(n - 1);   // recursion
+            }                
+                
+                /*  {
+               
+               int rec_num = 1;     // initialising a number for an end point
 
 
                 for (rec_num = 1; rec_num <= n; rec_num++)    // creating a loop to get the numbers sequentially and is increased upto the given number
@@ -51,7 +62,7 @@ namespace Assignment1_Spring2020
                     Console.WriteLine();
                 }
 
-            }
+            }   */
             catch
             {
                 Console.WriteLine("Exception Occured while computing printPattern");
